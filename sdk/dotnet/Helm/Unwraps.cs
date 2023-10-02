@@ -87,7 +87,7 @@ namespace Pulumi.Kubernetes.Helm
                             IncludeTestHookResources = vs.Item8[0],
                             SkipCRDRendering = vs.Item8[1],
                             SkipAwait = vs.Item8[2],
-                            KubeVersion = vs.Item[3],
+                            KubeVersion = vs.Item8[3],
                         })),
                 v => Output.Tuple(v.ApiVersions, v.IncludeTestHookResources.ToNullable(), v.SkipCRDRendering.ToNullable(), v.SkipAwait.ToNullable(), v.Namespace.ToNullable(), v.Values, v.KubeVersion.ToNullable()).Apply(vs =>
                     Union<ChartArgsUnwrap, LocalChartArgsUnwrap>.FromT1(

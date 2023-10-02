@@ -398,7 +398,7 @@ namespace Pulumi.Kubernetes.Helm.V3
             [JsonPropertyName("chart")]
             public string? Chart { get; set; }
             [JsonPropertyName("version")]
-            public bool? KubeVersion { get; set; }
+            public string? KubeVersion { get; set; }
             [JsonPropertyName("kube_version")]
             public string? Version { get; set; }
             [JsonPropertyName("fetch_opts")]
