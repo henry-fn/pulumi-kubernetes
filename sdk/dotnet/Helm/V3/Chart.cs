@@ -315,7 +315,6 @@ namespace Pulumi.Kubernetes.Helm.V3
                     SkipCRDRendering = cfgBase.SkipCRDRendering,
                     Namespace = cfgBase.Namespace,
                     Values = cfgBase.Values,
-                    KubeVersion = cfgBase.KubeVersion,
                     ReleaseName = releaseName,
                     Repo = cfg.Repo,
                     Chart = cfg.Chart,
@@ -354,7 +353,6 @@ namespace Pulumi.Kubernetes.Helm.V3
                     SkipCRDRendering = cfgBase.SkipCRDRendering,
                     Namespace = cfgBase.Namespace,
                     Values = cfgBase.Values,
-                    KubeVersion = cfgBase.KubeVersion,
                     ReleaseName = releaseName,
                     Path = cfg.Path,
                 };
@@ -398,8 +396,6 @@ namespace Pulumi.Kubernetes.Helm.V3
             [JsonPropertyName("chart")]
             public string? Chart { get; set; }
             [JsonPropertyName("version")]
-            public bool? KubeVersion { get; set; }
-            [JsonPropertyName("kube_version")]
             public string? Version { get; set; }
             [JsonPropertyName("fetch_opts")]
             public JsonOptsFetch? FetchOptions { get; set; }
